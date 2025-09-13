@@ -49,7 +49,7 @@ app.post("/signin", async (req, res) => {
         return;
     }
 
-    // TODO: Compare the hashed pws here
+    
     const user = await prismaClient.user.findFirst({
         where: {
             email: parsedData.data.username,
